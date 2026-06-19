@@ -1,0 +1,163 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#0f172a;
+    padding:20px 80px;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+}
+
+.nav-links a:hover,
+.active{
+    color:#38bdf8;
+}
+
+/* Header */
+
+.skills-header{
+    text-align:center;
+    padding:80px 20px;
+
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+
+    color:white;
+}
+
+.skills-header h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.skills-header p{
+    max-width:700px;
+    margin:auto;
+}
+
+/* Skills */
+
+.skills-container{
+    padding:80px 100px;
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+}
+
+/* Category Card */
+
+.skill-category{
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+}
+
+.skill-category:hover{
+    transform:translateY(-5px);
+}
+
+.skill-category h2{
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+/* Skills */
+
+.skill-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill-list span{
+    background:#38bdf8;
+    color:white;
+
+    padding:10px 15px;
+
+    border-radius:20px;
+
+    font-size:14px;
+    font-weight:500;
+}
+
+/* Footer */
+
+footer{
+    background:#0f172a;
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .skills-container{
+        padding:40px 20px;
+    }
+
+    .skills-header h1{
+        font-size:36px;
+    }
+}

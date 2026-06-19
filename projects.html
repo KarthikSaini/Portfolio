@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartik Saini | Portfolio</title>
+    <title>Projects | Kartik Saini</title>
 
     <link rel="stylesheet" href="assets/css/projects.css">
 </head>
@@ -14,120 +14,149 @@
         <div class="logo">Kartik Saini</div>
 
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-
-        <div class="hero-content">
-            <h1>Hi, I'm Kartik Saini</h1>
-
-            <h2>Java Full Stack Developer</h2>
-
-            <p>
-                Building scalable applications using Java,
-                Spring Boot, React and Cloud Technologies.
-            </p>
-
-            <a href="projects.html" class="btn">
-                View Projects
-            </a>
-        </div>
-
-        <div class="hero-image">
-            <h1>Hello</h1>
-        </div>
-
-    </section>
-
-    <!-- Introduction -->
-    <section class="intro">
-
-        <h2>About Me</h2>
-
+    <!-- Header -->
+    <section class="projects-header">
+        <h1>My Projects</h1>
         <p>
-            I'm a Java Full Stack Developer with experience in
-            Spring Boot, React, MySQL, Docker and AWS.
-            I enjoy building real-world applications and
-            solving complex business problems through software.
+            A collection of projects showcasing my skills in
+            Java, Spring Boot, React, Mobile Development,
+            Cloud and Automation.
         </p>
-
     </section>
 
-    <!-- Featured Skills -->
-    <section class="skills">
+    <!-- Projects Grid -->
+    <section class="projects-container">
 
-        <h2>Featured Skills</h2>
+        <!-- Project 1 -->
+        <div class="project-card">
 
-        <div class="skill-container">
-
-            <div class="skill-card">
-                Java
+            <div class="project-image">
+                Netflix Clone
             </div>
 
-            <div class="skill-card">
-                Spring Boot
-            </div>
+            <div class="project-content">
 
-            <div class="skill-card">
-                React
-            </div>
+                <h2>Netflix Clone</h2>
 
-            <div class="skill-card">
-                MySQL
-            </div>
+                <p>
+                    Video streaming platform built using
+                    Spring Boot, React, MySQL and AWS.
+                </p>
 
-            <div class="skill-card">
-                Docker
-            </div>
+                <div class="tech-stack">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>React</span>
+                    <span>MySQL</span>
+                </div>
 
-            <div class="skill-card">
-                AWS
+                <div class="buttons">
+                    <a href="#">Live Demo</a>
+                    <a href="#">GitHub</a>
+                </div>
+
             </div>
 
         </div>
 
-    </section>
+        <!-- Project 2 -->
+        <div class="project-card">
 
-    <!-- Featured Projects -->
-    <section class="projects">
-
-        <h2>Featured Projects</h2>
-
-        <div class="project-container">
-
-            <div class="project-card">
-                <h3>Netflix Clone</h3>
-
-                <p>
-                    Full Stack video streaming platform built
-                    using Spring Boot, React and MySQL.
-                </p>
+            <div class="project-image">
+                Leave Encashment App
             </div>
 
-            <div class="project-card">
-                <h3>Leave Encashment App</h3>
+            <div class="project-content">
+
+                <h2>Leave Encashment App</h2>
 
                 <p>
-                    Automated leave management solution
-                    built using Microsoft Power Apps.
+                    Employee leave management and encashment
+                    solution developed using Microsoft Power Apps.
                 </p>
+
+                <div class="tech-stack">
+                    <span>Power Apps</span>
+                    <span>Power Automate</span>
+                    <span>Excel</span>
+                </div>
+
+                <div class="buttons">
+                    <a href="#">Demo</a>
+                    <a href="#">Details</a>
+                </div>
+
             </div>
 
-            <div class="project-card">
-                <h3>Ride Booking App</h3>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+
+            <div class="project-image">
+                Ride Sharing App
+            </div>
+
+            <div class="project-content">
+
+                <h2>Ride Sharing App</h2>
 
                 <p>
-                    Responsive ride booking mobile app
-                    developed using React Native.
+                    Uber-inspired mobile application
+                    with booking and map integration.
                 </p>
+
+                <div class="tech-stack">
+                    <span>React Native</span>
+                    <span>Expo</span>
+                    <span>Firebase</span>
+                </div>
+
+                <div class="buttons">
+                    <a href="#">Demo</a>
+                    <a href="#">GitHub</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+
+            <div class="project-image">
+                Email PDF Automation
+            </div>
+
+            <div class="project-content">
+
+                <h2>Email PDF Automation</h2>
+
+                <p>
+                    Automated extraction of PDF data from
+                    emails and export into Excel reports.
+                </p>
+
+                <div class="tech-stack">
+                    <span>Power Automate</span>
+                    <span>Excel</span>
+                    <span>Outlook</span>
+                </div>
+
+                <div class="buttons">
+                    <a href="#">Demo</a>
+                    <a href="#">Details</a>
+                </div>
+
             </div>
 
         </div>
@@ -136,11 +165,7 @@
 
     <!-- Footer -->
     <footer>
-
-        <p>
-            © 2026 Kartik Saini. All Rights Reserved.
-        </p>
-
+        <p>© 2026 Kartik Saini. All Rights Reserved.</p>
     </footer>
 
 </body>

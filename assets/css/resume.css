@@ -1,0 +1,182 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#0f172a;
+    padding:20px 80px;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+}
+
+.nav-links a:hover,
+.active{
+    color:#38bdf8;
+}
+
+/* Header */
+
+.resume-header{
+    text-align:center;
+    padding:80px 20px;
+
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+
+    color:white;
+}
+
+.resume-header h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.resume-header p{
+    margin-bottom:25px;
+}
+
+.download-btn{
+    display:inline-block;
+
+    background:#38bdf8;
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 25px;
+    border-radius:6px;
+}
+
+.download-btn:hover{
+    background:#0284c7;
+}
+
+/* Sections */
+
+.resume-section{
+    padding:60px 100px;
+}
+
+.resume-section h2{
+    margin-bottom:25px;
+    color:#0f172a;
+}
+
+/* Cards */
+
+.card{
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card span{
+    color:gray;
+    display:block;
+    margin-bottom:15px;
+}
+
+.card ul{
+    padding-left:20px;
+}
+
+.card li{
+    margin-bottom:10px;
+}
+
+/* Skills */
+
+.skills-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skills-grid span{
+    background:#38bdf8;
+    color:white;
+
+    padding:10px 15px;
+
+    border-radius:20px;
+}
+
+/* Footer */
+
+footer{
+    background:#0f172a;
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .resume-section{
+        padding:40px 20px;
+    }
+
+    .resume-header h1{
+        font-size:36px;
+    }
+}
