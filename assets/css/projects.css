@@ -94,6 +94,9 @@ body{
     0 5px 15px rgba(0,0,0,0.1);
 
     transition:0.3s;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover{
@@ -102,10 +105,9 @@ body{
 
 /* Project Image */
 
-.project-image{
+.project-image-div{
     height:200px;
 
-    display:flex;
     justify-content:center;
     align-items:center;
 
@@ -114,12 +116,20 @@ body{
     color:white;
     font-size:24px;
     font-weight:bold;
+    flex: 1;
+}
+
+.project-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Content */
 
 .project-content{
     padding:25px;
+    flex:1;
 }
 
 .project-content h2{
