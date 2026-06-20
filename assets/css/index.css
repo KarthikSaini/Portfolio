@@ -333,7 +333,7 @@ body{
 .skills {
     padding-left: 5vw;
     padding-right: 5vw;
-    padding-top: 10vh;
+    padding-top: 5vh;
     padding-bottom: 10vh;
      background:linear-gradient(
         135deg,
@@ -341,6 +341,10 @@ body{
         #1e293b
     );
     color: white;
+}
+
+.skills h2{
+    padding-bottom: 5vh;
 }
 
 .skill-container {

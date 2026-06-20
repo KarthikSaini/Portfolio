@@ -1,12 +1,30 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Kartik Saini</title>
 
+    <!-- Your Existing CSS -->
     <link rel="stylesheet" href="assets/css/contact.css">
+
+    <!-- EmailJS SDK -->
+    <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <script>
+        (function () {
+            emailjs.init({
+                publicKey: "KRKd54m-tISn23X2M"
+            });
+        })();
+    </script>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -42,27 +60,47 @@
 
             <div class="info-card">
                 <h3>Email</h3>
-                <p>kartiksaini1175@gmail.com</p>
+                <p>
+                    <a href="mailto:kartiksaini1175@gmail.com">
+                        kartiksaini1175@gmail.com
+                    </a>
+                </p>
             </div>
 
             <div class="info-card">
                 <h3>Phone</h3>
-                <p>+91 9636871175</p>
+                <p>
+                    +91 9636871175
+                </p>
             </div>
 
             <div class="info-card">
                 <h3>Location</h3>
-                <p>Gurugram, Rajasthan, India</p>
+                <p>Gurugram, India</p>
             </div>
 
             <div class="info-card">
                 <h3>LinkedIn</h3>
-                <p>www.linkedin.com/in/karthik-saini</p>
+                <p>
+                    <a
+                        href="https://www.linkedin.com/in/karthik-saini"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        linkedin.com/in/karthik-saini
+                    </a>
+                </p>
             </div>
 
             <div class="info-card">
                 <h3>GitHub</h3>
-                <p>github.com/KarthikSaini</p>
+                <p>
+                    <a
+                        href="https://github.com/KarthikSaini"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        github.com/KarthikSaini
+                    </a>
+                </p>
             </div>
 
         </div>
@@ -72,35 +110,52 @@
 
             <h2>Send a Message</h2>
 
-            <form>
+            <form id="contactForm">
 
                 <input
                     type="text"
+                    id="name"
+                    name="name"
                     placeholder="Your Name"
-                    required
-                >
+                    required>
 
                 <input
                     type="email"
+                    id="email"
+                    name="email"
                     placeholder="Your Email"
+                    required>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Your Phone Number"
                     required
-                >
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    inputmode="numeric">
 
                 <input
                     type="text"
-                    placeholder="Subject"
-                    required
-                >
+                    id="subject"
+                    name="subject"
+                    placeholder="Subject">
 
                 <textarea
+                    id="message"
+                    name="message"
                     rows="6"
                     placeholder="Your Message"
-                    required>
-                </textarea>
+                    required></textarea>
 
-                <button type="submit">
+                <button
+                    type="submit"
+                    id="submitBtn">
                     Send Message
                 </button>
+
+                <p id="statusMessage"></p>
 
             </form>
 
@@ -113,5 +168,67 @@
         <p>© 2026 Kartik Saini. All Rights Reserved.</p>
     </footer>
 
+    <script>
+
+        const form = document.getElementById("contactForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const statusMessage = document.getElementById("statusMessage");
+
+        document.getElementById("phone").addEventListener("input", function (e) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+
+        form.addEventListener("submit", async (e) => {
+
+            e.preventDefault();
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Sending...";
+
+            statusMessage.textContent = "";
+            statusMessage.style.color = "inherit";
+
+            const templateParams = {
+                from_name: document.getElementById("name").value,
+                from_email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value
+            };
+
+            try {
+
+                await emailjs.send(
+                    "service_xalki5v",
+                    "template_vkcbf38",
+                    templateParams
+                );
+
+                statusMessage.style.color = "#22c55e";
+                statusMessage.textContent =
+                    "Message sent successfully!";
+
+                form.reset();
+
+            } catch (error) {
+
+                console.error("EmailJS Error:", error);
+
+                statusMessage.style.color = "#ef4444";
+                statusMessage.textContent =
+                    "Failed to send message. Please try again.";
+
+            } finally {
+
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Send Message";
+
+            }
+
+        });
+
+    </script>
+
 </body>
+
 </html>

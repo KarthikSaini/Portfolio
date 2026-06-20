@@ -102,7 +102,10 @@ body{
 .experience,
 .objective,
 .achievements{
-    padding:80px 100px;
+    /* padding:80px 100px; */
+    padding-top: 80px;
+    padding-right: 100px;
+    padding-left: 100px;
 }
 
 .education h2,
